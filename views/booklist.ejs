@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/booklist.css">
+</head>
+<body>
+    <section>
+        <div class="background">
+            <h1>Library's Booklist </h1>
+            <p>Choose a book now</p>
+        </div>
+    </section>
+
+    <div class="search">
+        <form action="/booklist/category" method="post">
+           
+            <select name="category" id="">
+                <option value="">all</option>
+                <option value="Medical">Medical</option>
+                <option value="Law">Law</option>
+                <option value="Business">Business</option>
+            </select>
+           <button type="submit"><i class="fas fa-search"></i></button>
+       </form>
+    </div>
+   
+    <div class="container">
+        <% books.forEach((book)=>{ %> 
+       <div class="card"> 
+          <div class="image">
+            <img src="<%=book.image%>" alt="">
+          </div>
+        <div class="content">
+            <h1><%=book.title%></h1>
+            <p><%=book.book_description%></p>
+            <h4>By: <%=book.author%></h4>
+            <a href="/booklist/borrow/<%=book.id%>">Borrow Now</a>
+        </div>
+     </div>
+     <%}) %>   
+  </div>
+  
+</body>
+</html>

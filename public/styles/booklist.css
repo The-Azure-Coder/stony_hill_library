@@ -1,0 +1,111 @@
+section .background {
+    position: relative;
+    background-image: url('/images/list.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 23rem;
+
+}
+
+section .background h1 {
+    color: rgb(60, 59, 59);
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 25rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
+}
+
+section .background p {
+    color: rgb(60, 59, 59);
+    font-size: 3rem;
+    font-family: 'Ms Madi', cursive;
+    width: 30rem;
+    padding-left: 5rem;
+
+
+}
+
+.search {
+    margin-left: 60rem;
+    margin-top: 1.2rem;
+}
+
+.search form select {
+    padding: 8px;
+    width: 15rem;
+}
+
+.search form button {
+    padding: 8px;
+    height: 35px;
+    width: 40px;
+    position: relative;
+    left: -.3rem;
+    color: white;
+    background-color: blue;
+    border: none;
+    margin-bottom: 3rem;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+}
+
+
+
+.container .card {
+    box-shadow: 10px 10px 28px -9px rgba(181, 165, 165, 0.52);
+    -webkit-box-shadow: 10px 10px 28px -9px rgba(181, 165, 165, 0.52);
+    -moz-box-shadow: 10px 10px 28px -9px rgba(181, 165, 165, 0.52);
+    margin-bottom: 4rem;
+    height: 32rem;
+    width:20rem;
+    margin-left: 4rem;
+}
+
+.container .card .image{
+    width: 20rem ;
+}
+
+.container .card .image img{
+    width: 20rem;
+    height: 20rem;
+}
+
+.container .card .content {
+    padding: 10px;
+    width: 40rem;
+}
+
+
+.container .card .content h1 {
+    width: 40rem;
+    font-size: 20px;
+    margin-bottom: .4rem;
+    color: rgb(4, 4, 157);
+}
+
+.container .card .content p {
+    margin-bottom: 1.8rem;
+   
+}
+
+.container .card .content h4 {
+margin-left: 5rem;
+   
+}
+
+.container .card .content a {
+    position: relative;
+    top: 2rem;
+    padding: 10px;
+    border: 1px solid blue;
+    color: blue;
+    margin-left: 5.5rem;
+}

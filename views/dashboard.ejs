@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styles/dashboard.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="background">
+            <h1>Dashboard</h1>
+        </div>
+    </section>
+
+
+    <table id="orders" class="note-con">
+
+        <tr class="head-color">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Title</th>
+            <th>Book Description</th>
+            <th>Author</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <% records.forEach(function(record){ %>
+            <tr>
+                <td>
+                    <%= record.f_name%>
+                </td>
+                <td>
+                    <%= record.l_name%>
+                </td>
+
+                <td>
+                    <%= record.title%>
+                </td>
+
+                <td>
+                    <%= record.book_description%>
+                </td>
+
+                <td>
+                    <%= record.author%>
+                </td>
+
+                <td>
+                    <%= record.email%>
+                </td>
+
+                <td>
+                    <select name="" id="">
+                        <option value="">Pending</option>
+                        <option value="">Processed</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="action">
+                        <a href="admin/delete/<%=record.id%>">Delete</a>
+
+                    </div>
+                </td>
+            </tr>
+
+
+            <% }); %>
+
+    </table>
+
+
+
+
+</body>
+
+</html>
