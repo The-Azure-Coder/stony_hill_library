@@ -24,10 +24,13 @@
         <tr class="head-color">
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Borrowed Books</th>
             <th>Title</th>
             <th>Book Description</th>
             <th>Author</th>
-            <th>Email</th>
+            <th>Availability</th>
+            <th>Borrowed Date</th>
+            <th>Return Date</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -38,6 +41,9 @@
                 </td>
                 <td>
                     <%= record.l_name%>
+                </td>
+                <td>
+                    <%= record.borrowed_books%>
                 </td>
 
                 <td>
@@ -53,13 +59,22 @@
                 </td>
 
                 <td>
-                    <%= record.email%>
+                    <%= record.availability%>
+                </td>
+
+                <td>
+                    <%= record.date_borrowed%>
+                </td>
+
+                <td>
+                    <%= record.return_date%>
                 </td>
 
                 <td>
                     <select name="" id="">
                         <option value="">Pending</option>
-                        <option value="">Processed</option>
+                        <option value="">Approved</option>
+                        <option value="">Disapproved</option>
                     </select>
                 </td>
                 <td>

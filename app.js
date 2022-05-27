@@ -4,6 +4,7 @@ var app = express()
 var path = require('path')
 var cookieParser = require('cookie-parser');
 const session = require('express-session');
+var flash = require('express-flash')
 
 app.use(layout)
 app.use(express.json())
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.use('/images', express.static('images'))
 
+app.use(flash())
 app.use(cookieParser());
 app.use(session({
     secret: 'secREt$#code$%3245',

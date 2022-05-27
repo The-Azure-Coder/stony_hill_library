@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/borrow.css">
+  
 </head>
+
+
+
 
 <body>
     <section>
@@ -15,40 +19,38 @@
             <h1>Borrow <%=borrowedItem.title%></h1>
         </div>
     </section>
+
+
     <div class="card">
         <div class="image">
             <img src="<%=borrowedItem.image%>" alt="">
         </div>
 
-        <form action="/booklist/add" method="post">
+        <form action="/booklist/borrowed" method="post">
         <div class="content">
             <div class="sep">
                 <div class="num">
-            <label for="">
-                First Name
-                <input type="text" name="f_name">
-            </label>
-            <label for="">Title
-            <input type="text" name="title"  value="<%=borrowedItem.title%>" readonly>
-            </label>
+                    <label for=""> Student ID
+                        <input type="text" name ="student_id">
+                    </label>
         </div>
         <div class="sep2">
-            <label for="">Last Name
-            <input type="text" name="l_name">
-            </label>
             <label for=""> Availability
-            <input type="text"  name ="availability"  value="<%=borrowedItem.availability%>">
+            <input type="text"  name ="availability"  value="<%=borrowedItem.availability%>" readonly>
             </label>
             </div>
             </div>
+            <label for="">Title
+                <input type="text" name="title"  value="<%=borrowedItem.title%>" readonly>
+                </label>
             <label for=""> Book Description
-                <input type="text" name ="book_description"  value="<%=borrowedItem.book_description%>">
+                <input type="text" name ="book_description"  value="<%=borrowedItem.book_description%>" readonly>
             </label>
-            <label for=""> Email
-                <input type="text" name ="email">
-            </label>
+
+            <input type="hidden" name ="id" value="<%=borrowedItem.id%>" readonly>
+            
             <label for="">Author
-                <input type="text" name ="author" value="<%=borrowedItem.author%>">
+                <input type="text" name ="author" value="<%=borrowedItem.author%>" readonly>
             </label>
             <input type="submit" value="Borrow">
         </div>

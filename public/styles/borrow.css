@@ -25,10 +25,11 @@ section .background h1 {
     display: flex;
     margin: 2rem auto 2rem;
     width: fit-content;
+    height: 30rem
 }
 
 .image img {
-    height: 35rem;
+    height: 30rem;
     width: 28rem;
     display: block;
     object-fit: cover;
@@ -64,6 +65,10 @@ input {
     display: block;
     width: 24rem;
     margin-bottom: 1.5rem;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc
+
 
 }
 
@@ -75,3 +80,4 @@ input {
     margin-left: 1.1rem;
     border: none;
 }
+
